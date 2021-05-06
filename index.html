@@ -6,5 +6,21 @@
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
+    <script>
+      const add = (x,y) => {
+        if(!x || !y) return "";       
+        x = parseInt(x);
+        y = parseInt(y);
+        if(x+y < 10){
+          return "10より小さい";      
+        }
+        return "10より大きい"
+      }
+    </script>
+    
+    <form oninput="result.value = add(hoge.value,fuga.value)">
+      <input type="number" name="hoge"> + <input type="number" name="fuga">
+      = <output name="result">
+    </form>
   </body>
 </html>
