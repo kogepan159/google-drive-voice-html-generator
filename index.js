@@ -10,6 +10,9 @@ const add = (x,y) => {
 
   function OnButtonClick(mozi) {
     target = document.getElementById("output");
+    // サンプル
+    // https://drive.google.com/file/d/1hKlZh7-v0wLlJU59jiPbYDbWOQu3SkwA/view?usp=sharing
+    const words = mozi.split('/');
     //googleUrlId = document.getElementById("googleUrl").nodeValue;
-    target.innerHTML = mozi;
+    target.innerHTML = "https://docs.google.com/uc?id=" + words[5];
   };
