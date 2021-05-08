@@ -12,17 +12,27 @@
    	<!-- Audio Player HTML -->
     <div class="audio-player">
       <h1 name="param" id="inputparam"></h1>
-      <img width="120" height="120" class="cover" src="img/cast-icon.png" alt="">
+      <img id="audio-image"width="120" height="120" class="cover" src="" alt="">
       <audio id="audio-player" src="demo.mp3" type="audio/mp3" controls="controls"></audio>
     </div>
 
     <script>
       var urlParam = new URL(window.location.href)
       var params = urlParam.searchParams;
-      console.log("--- urlParam ----")
+      console.log("--- urlParam Title----")
       console.log(params.get('title'))
       //console.log(params.get('id'))
       document.getElementById("inputparam").innerHTML  = params.get('title');
+      var audioPlayer = document.getElementById('audio-player');
+      console.log("--- urlParam ----")
+      console.log(params.get('urlId'))
+      audioPlayer.src = "https://docs.google.com/uc?id=" + params.get('urlId')
+      audioPlayer.load();
+
+      var audioImage = document.getElementById('audio-image');
+      console.log("--- urlParam ----")
+      console.log(params.get('urlId'))
+      audioImage.src = "https://docs.google.com/uc?id=" + params.get('imageId')
       
       $(document).ready(function() {
         $('#audio-player').mediaelementplayer({

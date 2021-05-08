@@ -11,22 +11,28 @@
   <body>
     <script type="text/javascript" src="index.js"></script>
     <h1>音声ファイルのカスタムで埋め込みができるよ！</h1>
+    <br>
+    <h2>誰でも読み込めるURLを使ってください</h2>
     <div id="area1">
-      <h4>GoogleDriveURL</h4>
+      <h4>GoogleDrive音声URL</h4>
       <input type="text" id="googleUrl" name="googleUrl" class="font-main" />
+      <br><br>
+      <h4>GoogleDrive画像URL</h4>
+      <input type="text" id="googleUrlImage" name="googleUrlImage" class="font-main" />
       <br><br>
       <h4>タイトル</h4>
       <input type="text" id="titleName" name="titleName" class="font-main" />
       <br>
       <br><br>
-      <button class="btn btn--orange btn--radius" type="button" id="btn1" onclick="OnButtonClick(googleUrl.value, titleName.value);">埋め込み作成！</button>
+      <button class="btn btn--orange btn--radius" type="button" id="btn1" onclick="OnButtonClick(googleUrl.value, titleName.value, googleUrlImage.value);">埋め込み作成！</button>
     </div>
     <br><br>
     <div id="output"></div>
     <div id="outputmozi"></div>
     <h2>埋め込み情報</h2>
-    <input type="text" id="embedded" name="embedded" class="font-main" />
-    <iframe width="560" height="315" src="./music_player/music_player.html?title=undefined&url=https://docs.google.com/uc?id=https://drive.google.com/file/d/1hKlZh7-v0wLlJU59jiPbYDbWOQu3SkwA/view?usp=sharing"></iframe>
+    <textarea type="text" id="embedded" name="embedded"></textarea>
+    <h2>表示サンプル</h2>
+    <iframe width="560" height="160" src="./music_player/music_player.html?title=4月カレンダー紹介&urlId=1LTKWrt0zobBvEghY3uz0E8HPVobVhDE9&imageId=1REN-gL-e2q3zyjnRej3zKvLM-fFoNHZn"></iframe>
 
     <!-- 埋め込みサンプル -->
     <!-- <iframe width="560" height="315" src="https://kogepan159.github.io/google-drive-voice-html-generator/music_player/music_player.html"></iframe> -->

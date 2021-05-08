@@ -43,3 +43,9 @@
 .btn--radius {
     border-radius: 100vh;
 }
+
+textarea {
+  resize: vertical;
+  width:400px;
+  height:200px;
+}
