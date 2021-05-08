@@ -10,16 +10,25 @@
   </head>
   <body>
     <script type="text/javascript" src="index.js"></script>
-    <h2>GoogleDriveの共有URLを入れてね！</h2>
+    <h1>音声ファイルのカスタムで埋め込みができるよ！</h1>
     <div id="area1">
+      <h4>GoogleDriveURL</h4>
       <input type="text" id="googleUrl" name="googleUrl" class="font-main" />
       <br><br>
-      <button class="btn btn--orange btn--radius" type="button" id="btn1" onclick="OnButtonClick(googleUrl.value);">埋め込みURL作成</button>
+      <h4>タイトル</h4>
+      <input type="text" id="titleName" name="titleName" class="font-main" />
+      <br>
+      <br><br>
+      <button class="btn btn--orange btn--radius" type="button" id="btn1" onclick="OnButtonClick(googleUrl.value, titleName.value);">埋め込み作成！</button>
     </div>
     <br><br>
     <div id="output"></div>
     <div id="outputmozi"></div>
-    <iframe width="560" height="315" src="./music_player/music_player.html?name=1111"></iframe>
+    <h2>埋め込み情報</h2>
+    <input type="text" id="embedded" name="embedded" class="font-main" />
+    <iframe width="560" height="315" src="./music_player/music_player.html?title=undefined&url=https://docs.google.com/uc?id=https://drive.google.com/file/d/1hKlZh7-v0wLlJU59jiPbYDbWOQu3SkwA/view?usp=sharing"></iframe>
+
+    <!-- 埋め込みサンプル -->
     <!-- <iframe width="560" height="315" src="https://kogepan159.github.io/google-drive-voice-html-generator/music_player/music_player.html"></iframe> -->
   </body>
 </html>

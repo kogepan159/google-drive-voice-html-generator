@@ -20,9 +20,9 @@
       var urlParam = new URL(window.location.href)
       var params = urlParam.searchParams;
       console.log("--- urlParam ----")
-      console.log(params.get('name'))
+      console.log(params.get('title'))
       //console.log(params.get('id'))
-      document.getElementById("inputparam").innerHTML  = params.get('name');
+      document.getElementById("inputparam").innerHTML  = params.get('title');
       
       $(document).ready(function() {
         $('#audio-player').mediaelementplayer({
