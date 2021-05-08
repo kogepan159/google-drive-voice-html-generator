@@ -49,3 +49,8 @@ textarea {
   width:400px;
   height:200px;
 }
+
+.copy-div {
+  display: inline-block;
+  margin: 10px;
+}

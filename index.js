@@ -17,3 +17,17 @@ const add = (x,y) => {
     targetEmbedded = document.getElementById("embedded")
     targetEmbedded.value = `<iframe width=\"560\" height=\"160\" src=\"https://kogepan159.github.io/google-drive-voice-html-generator/music_player/music_player.html?title=${titleName}&urlId=https://docs.google.com/uc?id=${words[5]}\&imageId=${googleUrlImageWords[5]}\"></iframe>`
   };
+
+  function copyToClipboard() {
+    // コピー対象をJavaScript上で変数として定義する
+    var copyTarget = document.getElementById("embedded");
+
+    // コピー対象のテキストを選択する
+    copyTarget.select();
+
+    // 選択しているテキストをクリップボードにコピーする
+    document.execCommand("Copy");
+
+    // コピーをお知らせする
+    alert("コピーできました！ : " + copyTarget.value);
+  };
