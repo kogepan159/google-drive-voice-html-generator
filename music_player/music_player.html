@@ -11,12 +11,19 @@
   <body>
    	<!-- Audio Player HTML -->
     <div class="audio-player">
-      <h1>Demo - Preview Song</h1>
+      <h1 name="param" id="inputparam"></h1>
       <img width="120" height="120" class="cover" src="img/cast-icon.png" alt="">
       <audio id="audio-player" src="demo.mp3" type="audio/mp3" controls="controls"></audio>
     </div>
 
     <script>
+      var urlParam = new URL(window.location.href)
+      var params = urlParam.searchParams;
+      console.log("--- urlParam ----")
+      console.log(params.get('name'))
+      //console.log(params.get('id'))
+      document.getElementById("inputparam").innerHTML  = params.get('name');
+      
       $(document).ready(function() {
         $('#audio-player').mediaelementplayer({
           alwaysShowControls: true,
