@@ -15,7 +15,7 @@ const add = (x,y) => {
     const words = url.split('/');
     const googleUrlImageWords = googleUrlImage.split('/');
     targetEmbedded = document.getElementById("embedded")
-    targetEmbedded.value = `<iframe width=\"560\" height=\"160\" src=\"https://kogepan159.github.io/google-drive-voice-html-generator/music_player/music_player.html?title=${titleName}&urlId=https://docs.google.com/uc?id=${words[5]}\&imageId=${googleUrlImageWords[5]}\"></iframe>`
+    targetEmbedded.value = `<iframe width=\"560\" height=\"160\" src=\"https://kogepan159.github.io/google-drive-voice-html-generator/music_player/music_player.html?title=${titleName}&urlId=${words[5]}\&imageId=${googleUrlImageWords[5]}\"></iframe>`
   };
 
   function copyToClipboard() {
